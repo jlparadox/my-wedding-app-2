@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+    background: #333;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+#vid-bg {
+    /*  making the video fullscreen  */
+    backface-visibility:hidden;
+    /* background:url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000; */
+    background-size:cover;
+    bottom:0;
+    height:auto;
+    min-height:100%;
+    min-width:100%;
+    perspective:1000;
+    position:fixed;
+    right:0;
+    width:auto;
+    z-index:-1;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+
+    
