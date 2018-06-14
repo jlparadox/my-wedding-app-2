@@ -1,0 +1,8 @@
+<div class="container">
+   <div class="gallerize-example">
+    <h2>Gallerize Example</h2>
+    <div class="gallerize-container" gallerize>
+      <img *ngFor="let img of imageData" [src]="img.srcUrl" (click)="openLightbox(img.i)">
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@ngx-gallery/core/styles/gallery';
+@import '~@ngx-gallery/core/styles/lightbox.css';
 @import './dusty-blue-wedding.scss';
 body { margin: 0; }

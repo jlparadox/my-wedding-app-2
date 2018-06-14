@@ -1,27 +1,30 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="100" alt="Angular Logo" src="assets/images/launchpad_20760.png">
-</div>
-<video autoplay muted loop id="vid-bg">
-  <source src="assets/videos/iceland.webm" type="video/WebM">
-</video>
-<div class="content">
-  <app-user-profile></app-user-profile>
-  <h2>Here are some links to help you start: </h2>
-  <ul>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-  </ul>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="nav-toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+            <mat-list-item *ngFor="let link of links">
+                <a matLine href="...">{{ link }}</a>
+             </mat-list-item>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+          <app-logo>
+          </app-logo>
+          <div>
+          </div>
+          <video autoplay muted loop id="vid-bg">
+            <source src="assets/videos/ink_water.webm" type="video/WebM">
+          </video>
+          <app-gallery></app-gallery>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>
 
 

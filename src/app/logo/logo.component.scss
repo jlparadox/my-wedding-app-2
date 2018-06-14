@@ -1,0 +1,91 @@
+.holder{
+	color: #a3b0c0;
+    font-family: "Lato", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.fancy {
+	line-height: 0.5;
+	text-align: center;
+}
+.fancy span {
+	display: isnline-block;
+	position: relative;
+    font-size: 1rem;
+}
+.fancy span:before,
+.fancy span:after {
+content: "";
+	position: absolute;
+	height: 10px;
+	border-bottom: 1px solid #6F7AA3;
+	border-top: 1px solid #6F7AA3;
+	top: 5px;
+	width: 5vw;
+}
+.fancy span:before {
+	right: 100%;
+	margin-right: 15px;
+}
+.fancy span:after {
+	left: 100%;
+	margin-left: 15px;
+}
+
+h2 {
+	font-family: 'Cookie', cursive;
+	color: #a3b0c0;
+    font-size: 7rem;
+    margin: 10px;
+	font-weight: 300 !important;
+	text-shadow: 3px 3px rgba(0, 0, 255, 0.3);;
+}
+
+p {
+	color: #a3b0c0;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.logo-container {
+	margin-top: 5rem;
+  height: 100vh;
+}
+
+.menu-button{
+	transition: fill 500ms;
+}
+
+.outer-circle {
+	transform-origin: 60px 60px;
+	transition: transform 2s cubic-bezier(0.620, 0.005, 0.000, 1.005);
+}
+
+.button {
+	margin-top: 10px;
+	max-width: 8rem;
+	background: none;
+	border: 0 none;
+	font-size: 0;
+	cursor: pointer;
+
+	svg {
+		width: 100%;
+		height: auto;
+	}
+
+	&:hover {
+
+		.menu-button {
+			fill: #4d87ff;
+		}
+
+		.outer-circle {
+			transform: rotate(360deg);
+		}
+
+	}
+
+}

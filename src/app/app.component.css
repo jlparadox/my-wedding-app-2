@@ -5,6 +5,7 @@ body {
     background: #333;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Lato', sans-serif;
   }
 
 #vid-bg {
@@ -26,11 +27,49 @@ body {
 .content {
     position: fixed;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 255, 0.3);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
 }
 
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-toolbar {
+    position: fixed;
+    z-index: 999;
+    height: 2.5rem;
+  }
+
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  
 
     
