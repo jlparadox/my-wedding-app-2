@@ -1,6 +1,20 @@
-import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Inject,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  OnDestroy
+} from '@angular/core';
+import { Masonry } from '@thisissoon/angular-masonry';
+import { MasonryOptions } from '@thisissoon/angular-masonry';
+import { MasonryInstance } from '@thisissoon/angular-masonry';
+import { cards } from './cards';
 import {Gallery, GalleryItem, ImageItem} from '@ngx-gallery/core';
 import {Lightbox} from '@ngx-gallery/lightbox';
+import {NgxMasonryOptions} from 'ngx-masonry';
 import {map} from 'rxjs/operators';
 
 @Component({
@@ -9,8 +23,14 @@ import {map} from 'rxjs/operators';
   styleUrls: ['./gallery.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   items: GalleryItem[];
+  @ViewChild('grid') public grid: ElementRef;
+
+  public masonryInstance: MasonryInstance;
+
+  public cards = cards;
+
 
   imageData = [
     {
@@ -36,7 +56,7 @@ export class GalleryComponent implements OnInit {
   ];
 
 
-  constructor(public gallery: Gallery, public lightbox: Lightbox) {
+  constructor(public gallery: Gallery, public lightbox: Lightbox, @Inject(Masonry) public masonry) {
   }
 
   ngOnInit() {
@@ -52,6 +72,24 @@ export class GalleryComponent implements OnInit {
   openLightbox(index: number) {
     // opens the gallery instance into the lightbox 'lightbox'
     this.lightbox.open(index, 'lightbox');
+  }
+
+  ngAfterViewInit() {
+    const options: MasonryOptions = {
+      itemSelector: '.card',
+      columnWidth: '.card',
+      gutter: 20,
+      fitWidth: true
+    };
+    this.masonryInstance = new this.masonry(this.grid.nativeElement, options);
+  }
+
+  layout() {
+    this.masonryInstance.layout();
+  }
+
+  ngOnDestroy() {
+    this.masonryInstance.destroy();
   }
 
 }

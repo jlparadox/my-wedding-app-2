@@ -1,5 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@ngx-gallery/core/styles/gallery';
-@import '~@ngx-gallery/core/styles/lightbox.css';
+@import '~@ngx-gallery/core/styles/gallery.scss';
+@import '~@ngx-gallery/core/styles/lightbox.scss';
+@import '~@ngx-gallery/core/styles/thumbnails.scss';
 @import './dusty-blue-wedding.scss';
-body { margin: 0; }
+
+body {
+  margin: 0;
+}
+
+.primary-color {
+  color: #8597ae;
+}
+
+.primary-bg-color {
+  background-color: #8597ae;
+}
+
+.lt-primary-color {
+  color: #f0f3f5;
+}
+
+.lt-primary-bg-color {
+  background-color: #f0f3f5;
+}
+
+.dk-primary-color {
+  color: #556984;
+}
+
+.dk-primary-bg-color {
+  background-color: #556984;
+}

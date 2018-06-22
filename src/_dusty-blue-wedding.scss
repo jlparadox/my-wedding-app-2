@@ -4,36 +4,36 @@
 
 $general-typography: mat-typography-config(
   $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
-  $body-2:        mat-typography-level(14px, 24px, 600)  
+  $body-2:        mat-typography-level(14px, 24px, 600)
 );
 
-@include mat-core($general-typography); 
+@include mat-core($general-typography);
 
 
 $md-dustyblue: (
-    50 : #edf0f4,
-    100 : #d3d9e3,
-    200 : #b6c0d1,
-    300 : #99a7bf,
-    400 : #8394b1,
-    500 : #6d81a3,
-    600 : #65799b,
-    700 : #5a6e91,
-    800 : #506488,
-    900 : #3e5177,
-    A100 : #ccddff,
-    A200 : #99baff,
-    A400 : #6698ff,
-    A700 : #4d87ff,
+    50 : #f0f3f5,
+    100 : #dae0e7,
+    200 : #c2cbd7,
+    300 : #aab6c6,
+    400 : #97a7ba,
+    500 : #8597ae,
+    600 : #7d8fa7,
+    700 : #72849d,
+    800 : #687a94,
+    900 : #556984,
+    A100 : #ebf3ff,
+    A200 : #b8d5ff,
+    A400 : #85b7ff,
+    A700 : #6ca8ff,
     contrast: (
         50 : #000000,
         100 : #000000,
         200 : #000000,
         300 : #000000,
         400 : #000000,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
         800 : #ffffff,
         900 : #ffffff,
         A100 : #000000,

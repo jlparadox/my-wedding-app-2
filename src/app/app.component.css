@@ -24,6 +24,18 @@ body {
     z-index:-1;
 }
 
+.bgBox {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index:-1;
+}
+
 .content {
     position: fixed;
     bottom: 0;
@@ -32,6 +44,12 @@ body {
     width: 100%;
     padding: 20px;
 }
+
+.mat-icon-button, .mat-icon{
+  font-size: 2rem;
+  margin: .5rem;
+}
+
 
 .example-container {
     display: flex;
@@ -54,22 +72,21 @@ body {
     /* Make sure the toolbar will stay on top of the content as it scrolls past. */
     z-index: 2;
   }
-  
+
   h1.example-app-name {
     margin-left: 8px;
   }
-  
+
   .example-sidenav-container {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
   }
-  
+
   .example-is-mobile .example-sidenav-container {
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
   }
-  
 
-    
+

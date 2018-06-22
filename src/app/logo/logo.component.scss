@@ -6,13 +6,12 @@
 }
 
 .fancy {
-	line-height: 0.5;
 	text-align: center;
 }
 .fancy span {
-	display: isnline-block;
+	display: inline-block;
 	position: relative;
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .fancy span:before,
 .fancy span:after {
@@ -34,23 +33,21 @@ content: "";
 }
 
 h2 {
-	font-family: 'Cookie', cursive;
-	color: #a3b0c0;
-    font-size: 7rem;
-    margin: 10px;
+	font-family: 'Prata', cursive;
+  font-size: 7rem;
+  margin: 10px;
 	font-weight: 300 !important;
-	text-shadow: 3px 3px rgba(0, 0, 255, 0.3);;
+	text-shadow: 3px 3px rgba(85, 105, 132, 0.3);
 }
 
 p {
-	color: #a3b0c0;
+	  color: #6F7AA3;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 10px;
 }
 
 .logo-container {
-	margin-top: 5rem;
   height: 100vh;
 }
 

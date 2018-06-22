@@ -1,27 +1,30 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="primary" class="nav-toolbar">
-      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    </mat-toolbar>
-
     <mat-sidenav-container class="example-sidenav-container"
-                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+                           [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+      <mat-sidenav class="dk-primary-bg-color" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="0">
         <mat-nav-list>
             <mat-list-item *ngFor="let link of links">
-                <a matLine href="...">{{ link }}</a>
-             </mat-list-item>
+              <a matLine *ngIf="link.route != 'Logout'" routerLink="{{link.route}}" routerLinkActive="active">
+                <i class="material-icons lt-primary-color">{{ link.icon }}</i>
+              </a>
+              <a matLine href="..." *ngIf="link.route == 'Logout'" (click)="logout()">
+                <i class="material-icons lt-primary-color">{{ link.icon }}</i>
+              </a>
+           </mat-list-item>
         </mat-nav-list>
       </mat-sidenav>
 
       <mat-sidenav-content>
+          <button mat-icon-button class="dk-primary-color" (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
           <app-logo>
           </app-logo>
           <div>
           </div>
-          <video autoplay muted loop id="vid-bg">
-            <source src="assets/videos/ink_water.webm" type="video/WebM">
-          </video>
+          <div class="bgBox" style="filter: ; background-image: url(https://images.unsplash.com/photo-1492714485642-dd6df6baafa2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89619f586c6cbe6d949bc05bd9d50b9e);"></div>
+          <!--<video autoplay muted loop id="vid-bg">-->
+            <!--<source src="assets/videos/ink_water.webm" type="video/WebM">-->
+          <!--</video>-->
           <app-gallery></app-gallery>
       </mat-sidenav-content>
     </mat-sidenav-container>

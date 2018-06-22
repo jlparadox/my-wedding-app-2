@@ -3,3 +3,18 @@
   width: 100vw;
   background-color: #99a7bf;
 }
+
+:host {
+  display: block;
+  margin-top: .5rem;
+}
+
+.grid {
+  margin: 0 auto;
+}
+
+.card {
+  display: inline-block;
+  margin: 1rem;
+  width: 18rem;
+}
