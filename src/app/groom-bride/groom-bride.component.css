@@ -1,0 +1,13 @@
+.section-container{
+  text-align: center;
+  display: flex;
+}
+
+div.item{
+  flex-basis: 25%;
+}
+
+.img-circle {
+    border-radius: 50%;
+    margin: 2rem;
+}

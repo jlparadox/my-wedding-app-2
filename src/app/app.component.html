@@ -17,15 +17,13 @@
 
       <mat-sidenav-content>
           <button mat-icon-button class="dk-primary-color" (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-          <app-logo>
-          </app-logo>
           <div>
           </div>
           <div class="bgBox" style="filter: ; background-image: url(https://images.unsplash.com/photo-1492714485642-dd6df6baafa2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89619f586c6cbe6d949bc05bd9d50b9e);"></div>
           <!--<video autoplay muted loop id="vid-bg">-->
             <!--<source src="assets/videos/ink_water.webm" type="video/WebM">-->
           <!--</video>-->
-          <app-gallery></app-gallery>
+          <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

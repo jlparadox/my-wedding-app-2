@@ -13,7 +13,6 @@ import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MasonryModule } from '@thisissoon/angular-masonry';
 
-
 import {AuthGuard} from './core/auth.guard';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {AppComponent} from './app.component';
@@ -41,6 +40,8 @@ import {StoryComponent} from './story/story.component';
 import {GreetingsComponent} from './greetings/greetings.component';
 import {PeopleComponent} from './people/people.component';
 import {CalendarLocationComponent} from './calendar-location/calendar-location.component';
+import { LocationComponent } from './location/location.component';
+import {AppRoutingModule} from './app-routing.module';
 
 
 const routes: Routes = [
@@ -76,6 +77,7 @@ const matImports = [
     GreetingsComponent,
     PeopleComponent,
     CalendarLocationComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,7 +90,8 @@ const matImports = [
     GalleryModule.forRoot(),
     LightboxModule.forRoot(),
     GallerizeModule,
-    MasonryModule.forRoot()
+    MasonryModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
