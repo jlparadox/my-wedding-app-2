@@ -9,6 +9,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {GalleryModule} from '@ngx-gallery/core';
 import {LightboxModule} from '@ngx-gallery/lightbox';
 import {GallerizeModule} from '@ngx-gallery/gallerize';
+import {NgxGalleryModule } from 'ngx-gallery';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MasonryModule } from '@thisissoon/angular-masonry';
@@ -90,6 +91,7 @@ const matImports = [
     LightboxModule.forRoot(),
     GallerizeModule,
     MasonryModule.forRoot(),
+    NgxGalleryModule,
     AppRoutingModule
   ],
   providers: [],

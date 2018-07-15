@@ -13,6 +13,7 @@ import { MasonryOptions } from '@thisissoon/angular-masonry';
 import { MasonryInstance } from '@thisissoon/angular-masonry';
 import { cards } from './cards';
 import {Gallery, GalleryItem, ImageItem} from '@ngx-gallery/core';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 import {Lightbox} from '@ngx-gallery/lightbox';
 import {map} from 'rxjs/operators';
 
@@ -55,7 +56,11 @@ export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   ];
 
 
-  constructor(public gallery: Gallery, public lightbox: Lightbox, @Inject(Masonry) public masonry) {
+  constructor(
+    // public gallery: Gallery, 
+    // public lightbox: Lightbox, 
+    @Inject(Masonry) public masonry
+  ) {
   }
 
   ngOnInit() {
@@ -65,12 +70,12 @@ export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     // This is for Lightbox example
-    this.gallery.ref('lightbox').load(this.items);
+    //this.gallery.ref('lightbox').load(this.items);
   }
 
   openLightbox(index: number) {
     // opens the gallery instance into the lightbox 'lightbox'
-    this.lightbox.open(index, 'lightbox');
+    //this.lightbox.open(index, 'lightbox');
   }
 
   ngAfterViewInit() {
