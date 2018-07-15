@@ -89,4 +89,17 @@ body {
     flex: 1 0 auto;
   }
 
+  .example-sidenav-container.is-mobile .mat-sidenav {
+    width: 100%;
+  }
+
+  .mat-list-item a span{
+    line-height: 5;
+    vertical-align: super;
+    margin-left: 15px;
+    color: #f0f3f5;
+  }
+
+  
+
 

@@ -14,7 +14,6 @@ import { MasonryInstance } from '@thisissoon/angular-masonry';
 import { cards } from './cards';
 import {Gallery, GalleryItem, ImageItem} from '@ngx-gallery/core';
 import {Lightbox} from '@ngx-gallery/lightbox';
-import {NgxMasonryOptions} from 'ngx-masonry';
 import {map} from 'rxjs/operators';
 
 @Component({

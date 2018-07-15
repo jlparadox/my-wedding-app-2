@@ -87,7 +87,6 @@ const matImports = [
     CoreModule,
     DiscordModule,
     RouterModule.forRoot(routes, {useHash: true}),
-    GalleryModule.forRoot(),
     LightboxModule.forRoot(),
     GallerizeModule,
     MasonryModule.forRoot(),

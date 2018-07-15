@@ -23,26 +23,24 @@ export class AppComponent implements OnDestroy {
       user => {
         if (user) {
           this.links = [
-            {route: '/home', icon: 'home'},
-            {route: '/groom_bride', icon: 'favorite'},
-            {route: '/story', icon: 'movie'},
-            {route: '/greetings', icon: 'card_giftcard'},
-            {route: '/people', icon: 'account_circle'},
-            {route: '/location', icon: 'event'},
-            {route: '/gallery', icon: 'collections'},
-            {route: '/rsvp', icon: 'assignment'},
-            {route: 'Logout', icon: 'exit_to_app'}
+            {route: '/home', icon: 'home', description: 'Home'},
+            {route: '/groom_bride', icon: 'favorite', description: 'Groom & Bride'},
+            {route: '/story', icon: 'movie', description: 'Our Story'},
+            {route: '/greetings', icon: 'card_giftcard', description: 'Greetings & Wishes'},
+            {route: '/people', icon: 'account_circle', description: 'Guest List'},
+            {route: '/location', icon: 'event', description: 'Location'},
+            {route: '/gallery', icon: 'collections', description: 'Gallery'},
+            {route: '/rsvp', icon: 'assignment', description: 'RSVP'},
+            {route: 'Logout', icon: 'exit_to_app', description: 'Logout'}
           ];
         } else {
           this.links = [
-            {route: '/home', icon: 'home'},
-            {route: '/groom_bride', icon: 'favorite'},
-            {route: '/story', icon: 'movie'},
-            {route: '/greetings', icon: 'card_giftcard'},
-            {route: '/people', icon: 'account_circle'},
-            {route: '/location', icon: 'event'},
-            {route: '/gallery', icon: 'collections'},
-            {route: '/login', icon: 'face'},
+            {route: '/home', icon: 'home', description: 'Home'},
+            {route: '/groom_bride', icon: 'favorite', description: 'Groom & Bride'},
+            {route: '/story', icon: 'movie', description: 'Our Story'},
+            {route: '/greetings', icon: 'card_giftcard', description: 'Greetings & Wishes'},
+            {route: '/gallery', icon: 'collections', description: 'Gallery'},
+            {route: '/login', icon: 'face', description: 'Login'},
           ];
         }
       },
