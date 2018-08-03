@@ -1,4 +1,6 @@
+<link src="assets/styles/socialfeed.css" rel="stylesheet"/>
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <div class="social-feed-container"></div>
     <mat-sidenav-container class="example-sidenav-container" [class.is-mobile]="mobileQuery.matches"
                            [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
       <mat-sidenav class="dk-primary-bg-color" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"

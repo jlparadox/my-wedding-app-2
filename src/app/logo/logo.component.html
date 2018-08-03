@@ -1,5 +1,5 @@
 <div style="text-align:center;" class="logo-container">
-	<button class="button logo-button">
+	<button class="button logo-button fade-in first">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
 			<g fill="none" fill-rule="evenodd">
 
@@ -18,10 +18,11 @@
 			</g>
 		</svg>
 	</button>
-	<h1 class="holder">
+	<h1 class="holder fade-in first">
 		<p class="subtitle fancy primary-color"><span>The wedding of</span></p>
 	</h1>
-	<h2 class="primary-color">Jonathan & Cristina</h2>
-	<p class="primary-color">11.19.2019</p>
+	<h2 class="primary-color fade-in second">Jonathan & Cristina</h2>
+	<p class="primary-color fade-in second">11.19.2019</p>
+  <button mat-raised-button color="primary" class="fade-in second" (click)="auth.googleLogin()">Register</button>
 </div>
 
