@@ -30,10 +30,10 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center center;
-    background-size: cover;
     z-index:-1;
+    background-image: url("/assets/images/subtle_white_feathers.png");
 }
 
 .content {

@@ -13,6 +13,7 @@ import {NgxGalleryModule } from 'ngx-gallery';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MasonryModule } from '@thisissoon/angular-masonry';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 import {AuthGuard} from './core/auth.guard';
 import {UserProfileComponent} from './user-profile/user-profile.component';
@@ -92,6 +93,7 @@ const matImports = [
     GallerizeModule,
     MasonryModule.forRoot(),
     NgxGalleryModule,
+    NgxQRCodeModule,
     AppRoutingModule
   ],
   providers: [],
