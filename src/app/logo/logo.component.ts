@@ -7,6 +7,9 @@ import {AuthService} from '../core/auth.service';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
+  elementType = 'url';
+  value = 'Techiediaries';
+  user: any;
 
   constructor(public auth: AuthService) { }
 
