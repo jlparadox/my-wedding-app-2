@@ -44,6 +44,7 @@ import {PeopleComponent} from './people/people.component';
 import {CalendarLocationComponent} from './calendar-location/calendar-location.component';
 import { LocationComponent } from './location/location.component';
 import {AppRoutingModule} from './app-routing.module';
+import { InvitationComponent } from './invitation/invitation.component';
 
 
 const routes: Routes = [
@@ -80,6 +81,7 @@ const matImports = [
     PeopleComponent,
     CalendarLocationComponent,
     LocationComponent,
+    InvitationComponent,
   ],
   imports: [
     BrowserModule,
