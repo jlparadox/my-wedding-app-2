@@ -31,6 +31,7 @@ export class AppComponent implements OnDestroy {
             {route: '/location', icon: 'event', description: 'Location'},
             {route: '/gallery', icon: 'collections', description: 'Gallery'},
             {route: '/rsvp', icon: 'assignment', description: 'RSVP'},
+            {route: '/invitation', icon: 'card_membership', description: 'Invitation'},
             {route: 'Logout', icon: 'exit_to_app', description: 'Logout'}
           ];
         } else {

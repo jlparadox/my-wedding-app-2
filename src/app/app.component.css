@@ -33,7 +33,7 @@ body {
     background-repeat: repeat;
     background-position: center center;
     z-index:-1;
-    background-image: url("/assets/images/subtle_white_feathers.png");
+    background-image: url("../assets/images/subtle_white_feathers.png");
 }
 
 .content {
