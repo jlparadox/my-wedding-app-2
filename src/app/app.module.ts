@@ -9,11 +9,11 @@ import {Routes, RouterModule} from '@angular/router';
 import {GalleryModule} from '@ngx-gallery/core';
 import {LightboxModule} from '@ngx-gallery/lightbox';
 import {GallerizeModule} from '@ngx-gallery/gallerize';
-import {NgxGalleryModule } from 'ngx-gallery';
+import {NgxGalleryModule} from 'ngx-gallery';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
-import { MasonryModule } from '@thisissoon/angular-masonry';
-import { NgxQRCodeModule } from 'ngx-qrcode2';
+import {MasonryModule} from '@thisissoon/angular-masonry';
+import {NgxQRCodeModule} from 'ngx-qrcode2';
 
 import {AuthGuard} from './core/auth.guard';
 import {UserProfileComponent} from './user-profile/user-profile.component';
@@ -33,7 +33,8 @@ import {
   MatListModule,
   MatTableModule,
   MatDividerModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSnackBarModule
 } from '@angular/material';
 import {GalleryComponent} from './gallery/gallery.component';
 import {RsvpComponent} from './rsvp/rsvp.component';
@@ -42,9 +43,9 @@ import {StoryComponent} from './story/story.component';
 import {GreetingsComponent} from './greetings/greetings.component';
 import {PeopleComponent} from './people/people.component';
 import {CalendarLocationComponent} from './calendar-location/calendar-location.component';
-import { LocationComponent } from './location/location.component';
+import {LocationComponent} from './location/location.component';
 import {AppRoutingModule} from './app-routing.module';
-import { InvitationComponent } from './invitation/invitation.component';
+import {InvitationComponent} from './invitation/invitation.component';
 
 
 const routes: Routes = [
@@ -65,6 +66,7 @@ const matImports = [
   MatListModule,
   MatTableModule,
   MatDividerModule,
+  MatSnackBarModule,
   MatProgressSpinnerModule,
 ];
 
@@ -91,11 +93,12 @@ const matImports = [
     CoreModule,
     DiscordModule,
     RouterModule.forRoot(routes, {useHash: true}),
-    LightboxModule.forRoot(),
     GallerizeModule,
-    MasonryModule.forRoot(),
     NgxGalleryModule,
     NgxQRCodeModule,
+    LightboxModule.forRoot(),
+    GalleryModule.forRoot(),
+    MasonryModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

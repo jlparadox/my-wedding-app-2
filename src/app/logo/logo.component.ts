@@ -9,7 +9,11 @@ import {AuthService} from '../core/auth.service';
 export class LogoComponent implements OnInit {
   user: any;
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService) {
+    this.auth.user.subscribe(user => {
+      this.user = user;
+    });
+  }
 
   ngOnInit() {
   }

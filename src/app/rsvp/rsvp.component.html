@@ -1,3 +1,25 @@
-<p>
-  rsvp works!
-</p>
+<div class="header-container fade-in first">
+  <img src="assets/images/love-letter-rsvp.svg" class="header-icon">
+  <h2 class="primary-color">We'd love to have you!</h2>
+</div>
+<div class="section-container fade-in second">
+  <mat-card class="card lt-primary-bg-color">
+    <mat-card-header class="mat-card-header-text">
+      <img mat-card-avatar [src]="user.photoURL">
+      <mat-card-title class="primary-color">Hey {{user.displayName}},</mat-card-title>
+      <mat-card-title class="primary-color">will you attend in our wedding?</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://images.unsplash.com/photo-1514120649397-daec977c71b5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a171207fa4a90227cb38523b578332a1&auto=format&fit=crop&w=1050&q=80" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="respondRSVP(true)">ACCEPT</button>
+      <button mat-button (click)="respondRSVP(false)">DECLINE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

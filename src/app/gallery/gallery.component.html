@@ -5,7 +5,7 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
   </p>
 <div class="grid fade-in second" #grid>
-  <mat-card class="card lt-primary-bg-color" *ngFor="let card of cards">
+  <mat-card class="card lt-primary-bg-color" *ngFor="let card of cards; let i = index" (click)="openLightbox(i)">
 
     <mat-card-header>
       <mat-card-title class="card-title"><span></span></mat-card-title>
