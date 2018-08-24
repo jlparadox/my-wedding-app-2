@@ -1,0 +1,19 @@
+<div style="text-align:center;" class="invitation-container">
+  <div id="invitation-content" class="invitation-content" background="/assets/images/invite_sample.jpg">
+    <h1 class="holder fade-in first">
+      <p class="subtitle primary-color"><span>You are invited</span></p>
+      <p class="subtitle primary-color"><span>To the wedding of</span></p>
+    </h1>
+    <h2 class="primary-color fade-in second">Jonathan & Cristina</h2>
+    <p class="primary-color fade-in second">11.19.2019</p>
+    <ngx-qrcode 
+      [qrc-element-type]="elementType" 
+      [qrc-value] = "value"
+      qrc-class = "aclass"
+      qrc-errorCorrectionLevel = "L">
+    </ngx-qrcode>
+    <p class="subtitle primary-color">scan this</p>
+  </div>
+  <button mat-raised-button color="primary" class="fade-in second" (click)="captureScreen()">Download</button>
+</div>
+
