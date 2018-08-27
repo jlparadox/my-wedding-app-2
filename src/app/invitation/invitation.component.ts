@@ -10,7 +10,7 @@ import html2canvas from 'html2canvas';
 })
 export class InvitationComponent implements OnInit {
   elementType = 'url';
-  value = 'Techiediaries';
+  value = 'https://lh3.googleusercontent.com/-mhQgcSm0SOI/AAAAAAAAAAI/AAAAAAAALIc/J07-NAniDi0/photo.jpg';
   testUrl = '/assets/images/invite_sample.jpg'
 
   constructor() { }

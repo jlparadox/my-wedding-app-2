@@ -34,6 +34,7 @@ import {
   MatTableModule,
   MatDividerModule,
   MatProgressSpinnerModule,
+  MatGridListModule,
   MatSnackBarModule
 } from '@angular/material';
 import {GalleryComponent} from './gallery/gallery.component';
@@ -68,6 +69,7 @@ const matImports = [
   MatDividerModule,
   MatSnackBarModule,
   MatProgressSpinnerModule,
+  MatGridListModule
 ];
 
 @NgModule({

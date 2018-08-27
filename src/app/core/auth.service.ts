@@ -9,7 +9,7 @@ import 'rxjs/add/observable/of';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 
-interface User {
+export interface User {
   uid: string;
   email: string;
   photoURL?: string;

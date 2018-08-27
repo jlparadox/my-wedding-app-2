@@ -1,0 +1,42 @@
+.header-container{
+    text-align: center;
+}
+
+div.item{
+    flex-basis: 15%;
+}
+
+img.header-icon {
+    width: 15vw;
+}
+
+.img-circle {
+    -webkit-filter: grayscale(50%);
+    border-radius: 50%;
+    margin: .5rem;
+    width: 20vw;
+    height: 15vh;
+}
+
+h2 {
+    font-family: 'Prata', cursive;
+    font-size: 8vw;
+    font-weight: 300 !important;
+    text-shadow: 1px 1px rgba(85, 105, 132, 0.3);
+    text-align: center;
+    margin: 5px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+h3.subheader{
+    font-weight: 400 !important;
+    font-size: 6vw;
+    text-align: center;
+    color: #556984;
+}
+
+div.subheader{
+    padding: .5rem;
+    margin: .5rem 0;
+}
