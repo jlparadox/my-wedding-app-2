@@ -4,11 +4,36 @@
 
 .section-container{
   text-align: center;
-  display: flex;
+  /*display: flex;*/
 }
 
 div.item{
-  flex-basis: 15%;
+  /*flex-basis: 15%;*/
+  margin-top: 110px;
+  padding: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+div.text-center {
+    text-align: center;
+}
+
+div.item:after {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    content: '';
+    background: #4c5f79;
+    z-index: -1;
+}
+
+div.item.bride{
+  /*flex-basis: 15%;*/
+  margin-top: 25vh;
+  padding-bottom: 20vh;
 }
 
 img.header-icon {
@@ -20,7 +45,8 @@ img.header-icon {
   -webkit-filter: grayscale(70%);
   border-radius: 50%;
   margin: .5rem;
-  width: 45vw;
+  margin-top: -8rem;
+  border: 10px solid #fff;
   height: 30vh;
 }
 
@@ -39,7 +65,7 @@ h3 {
   font-size: 4vw;
   margin: 10px;
   font-weight: 400 !important;
-  color: #4c5f79;
+  color: #fff;
 }
 
 span{
