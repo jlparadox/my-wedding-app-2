@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthGuard} from './core/auth.guard';
 
 import {GalleryComponent} from './gallery/gallery.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    FlexLayoutModule,
     RouterModule.forRoot(routes, {useHash: true}),
   ],
   providers: [],

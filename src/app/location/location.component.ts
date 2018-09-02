@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaChange, ObservableMedia } from '@angular/flex-layout';
+import { GalleryItem, GalleryConfig, ImageItem, ThumbnailsPosition } from '@ngx-gallery/core';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-location',
@@ -7,35 +11,38 @@ import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gal
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
+  readonly images$: Observable<GalleryItem[]>;
+
+  readonly media$: Observable<GalleryConfig>;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
-  constructor() { }
+  images: GalleryItem[];
+  constructor(media: ObservableMedia) {
+    this.media$ = media.asObservable().pipe(
+        map((res: MediaChange) => {
+          if (res.mqAlias === 'sm' || res.mqAlias === 'xs') {
+            return {
+              thumbPosition: ThumbnailsPosition.Top,
+              thumbWidth: 80,
+              thumbHeight: 80
+            };
+          }
+          return {
+            thumbPosition: ThumbnailsPosition.Left,
+            thumbWidth: 120,
+            thumbHeight: 90
+          };
+        })
+      );
+   }
 
   ngOnInit() {
-      this.galleryOptions = [
-        {
-            width: '600px',
-            height: '400px',
-            thumbnailsColumns: 4,
-            imageAnimation: NgxGalleryAnimation.Slide
-        },
-        // max-width 800
-        {
-            breakpoint: 800,
-            width: '100%',
-            height: '600px',
-            imagePercent: 80,
-            thumbnailsPercent: 20,
-            thumbnailsMargin: 20,
-            thumbnailMargin: 20
-        },
-        // max-width 400
-        {
-            breakpoint: 400,
-            preview: false
-        }
+    this.images = [
+        new ImageItem({ src: 'assets/images/aquila/img_1.jpg', thumb: 'assets/images/aquila/img_1.jpg'}),
+        new ImageItem({ src: 'assets/images/aquila/img_1.jpg', thumb: 'assets/images/aquila/img_1.jpg'}),
+        new ImageItem({ src: 'assets/images/aquila/img_1.jpg', thumb: 'assets/images/aquila/img_1.jpg'}),
+        new ImageItem({ src: 'assets/images/aquila/img_1.jpg', thumb: 'assets/images/aquila/img_1.jpg'}),
     ];
-
     this.galleryImages = [
         {
             small: 'assets/images/aquila/img_1.jpg',

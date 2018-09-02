@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@ngx-gallery/core/styles/gallery.scss';
-@import '~@ngx-gallery/core/styles/lightbox.scss';
-@import '~@ngx-gallery/core/styles/thumbnails.scss';
+@import '~@ngx-gallery/core/styles/scss/gallery.scss';
+@import '~@ngx-gallery/core/styles/scss/lightbox.scss';
+@import '~@ngx-gallery/core/styles/scss/thumbnails.scss';
 @import './dusty-blue-wedding.scss';
 
 /* make keyframes that tell the start state and the end state of our object */

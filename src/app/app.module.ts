@@ -6,7 +6,7 @@ import {environment} from '../environments/environment';
 import {DiscordModule} from './discord/discord.module';
 import {CoreModule} from './core/core.module';
 import {Routes, RouterModule} from '@angular/router';
-import {GalleryModule} from '@ngx-gallery/core';
+import { GalleryModule } from '@ngx-gallery/core';
 import {LightboxModule} from '@ngx-gallery/lightbox';
 import {GallerizeModule} from '@ngx-gallery/gallerize';
 import {NgxGalleryModule} from 'ngx-gallery';
@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MasonryModule} from '@thisissoon/angular-masonry';
 import {NgxQRCodeModule} from 'ngx-qrcode2';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {AuthGuard} from './core/auth.guard';
 import {UserProfileComponent} from './user-profile/user-profile.component';
@@ -91,6 +92,7 @@ const matImports = [
     BrowserModule,
     BrowserAnimationsModule,
     matImports,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
     DiscordModule,

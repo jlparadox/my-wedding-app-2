@@ -2,7 +2,12 @@
   <img src="assets/images/wedding-ring.svg" class="header-icon">
   <h2 class="primary-color">Ceremony & Party</h2>
 </div>
-<ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+<!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages" (click)="openLightbox(i)"></ngx-gallery> -->
+<gallery *ngIf="media$ | async; let config"
+[items]="images$ | async"
+[thumbWidth]="config.thumbWidth"
+[thumbHeight]="config.thumbHeight"
+[thumbPosition]="config.thumbPosition"></gallery>
 <div class="subheader">
   <h3 class="primary-color subheader">Location Map</h3>
 </div>
