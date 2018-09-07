@@ -66,7 +66,7 @@ export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     // This is for Basic example
     this.items = this.cards.map(item => {
-      return new ImageItem(item.srcUrl, item.srcUrl);
+      return new ImageItem({src: item.srcUrl, thumb: item.srcUrl});
     });
 
     // This is for Lightbox example
