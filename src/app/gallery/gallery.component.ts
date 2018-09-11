@@ -6,7 +6,7 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
-  OnDestroy
+  OnDestroy, ChangeDetectorRef
 } from '@angular/core';
 import {Masonry} from '@thisissoon/angular-masonry';
 import {MasonryOptions} from '@thisissoon/angular-masonry';
@@ -16,6 +16,7 @@ import {Gallery, GalleryItem, ImageItem} from '@ngx-gallery/core';
 import {NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation} from 'ngx-gallery';
 import {Lightbox} from '@ngx-gallery/lightbox';
 import {map} from 'rxjs/operators';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-gallery',
@@ -25,6 +26,8 @@ import {map} from 'rxjs/operators';
 })
 export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   items: GalleryItem[];
+  mobileQuery: MediaQueryList;
+  private _mobileQueryListener: () => void;
   @ViewChild('grid') public grid: ElementRef;
 
   public masonryInstance: MasonryInstance;
@@ -59,8 +62,13 @@ export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     public gallery: Gallery,
     public lightbox: Lightbox,
+    media: MediaMatcher,
+    changeDetectorRef: ChangeDetectorRef,
     @Inject(Masonry) public masonry
   ) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
   ngOnInit() {
@@ -94,6 +102,7 @@ export class GalleryComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.masonryInstance.destroy();
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
 }

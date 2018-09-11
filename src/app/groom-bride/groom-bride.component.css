@@ -36,9 +36,14 @@ div.item.bride{
   padding-bottom: 20vh;
 }
 
-img.header-icon {
+div.is-mobile img.header-icon {
   -webkit-filter: red(100%);
   width: 12vw;
+}
+
+img.header-icon {
+  -webkit-filter: red(100%);
+  width: 4vw;
 }
 
 .img-circle {
@@ -50,14 +55,16 @@ img.header-icon {
   height: 30vh;
 }
 
-h2 {
-  font-family: 'Prata', cursive;
+div.is-mobile h2 {
   font-size: 8vw;
+}
+
+h2 {
+  font-size: 5vw;
+  font-family: 'Prata', cursive;
+  margin: 10px;
   font-weight: 300 !important;
-  text-shadow: 1px 1px rgba(85, 105, 132, 0.3);
-  text-align: center;
-  margin: 5px;
-  text-transform: uppercase;
+  text-shadow: 3px 3px rgba(85, 105, 132, 0.3);
 }
 
 h3 {

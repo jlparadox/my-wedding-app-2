@@ -11,9 +11,14 @@ div.item{
     flex-basis: 15%;
 }
 
+div.is-mobile img.header-icon {
+  -webkit-filter: red(100%);
+  width: 12vw;
+}
+
 img.header-icon {
     -webkit-filter: red(100%);
-    width: 15vw;
+    width: 5vw;
 }
 
 .img-circle {
@@ -30,9 +35,14 @@ video{
     margin: 0 auto;
 }
 
+div.is-mobile h2 {
+  font-size: 8vw;
+}
+
+
 h2 {
     font-family: 'Prata', cursive;
-    font-size: 8vw;
+    font-size: 5vw;
     font-weight: 300 !important;
     text-shadow: 1px 1px rgba(85, 105, 132, 0.3);
     text-align: center;

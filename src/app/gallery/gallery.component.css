@@ -4,6 +4,11 @@
 
 img.header-icon {
   -webkit-filter: red(100%);
+  width: 4vw;
+}
+
+div.is-mobile img.header-icon {
+  -webkit-filter: red(100%);
   width: 12vw;
 }
 
@@ -30,12 +35,16 @@ img.header-icon {
 
 h2 {
   font-family: 'Prata', cursive;
-  font-size: 8vw;
+  font-size: 5vw;
   font-weight: 300 !important;
   text-shadow: 1px 1px rgba(85, 105, 132, 0.3);
   text-align: center;
   margin: 5px;
   text-transform: uppercase;
+}
+
+div.is-mobile h2 {
+  font-size: 8vw;
 }
 
 h3 {

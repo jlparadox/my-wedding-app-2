@@ -1,3 +1,8 @@
+iframe{
+  width: 100vw;
+  height: 450px;
+}
+
 .header-container{
     text-align: center;
 }
@@ -6,8 +11,12 @@ div.item{
     flex-basis: 15%;
 }
 
+div.is-mobile img.header-icon {
+  width: 12vw;
+}
+
 img.header-icon {
-    width: 15vw;
+    width: 4vw;
 }
 
 .img-circle {
@@ -20,13 +29,17 @@ img.header-icon {
 
 h2 {
     font-family: 'Prata', cursive;
-    font-size: 8vw;
+    font-size: 5vw;
     font-weight: 300 !important;
     text-shadow: 1px 1px rgba(85, 105, 132, 0.3);
     text-align: center;
     margin: 5px;
     text-transform: uppercase;
     margin-bottom: 2rem;
+}
+
+div.is-mobile h2 {
+  font-size: 8vw;
 }
 
 h3.subheader{

@@ -18,10 +18,10 @@
 			</g>
 		</svg>
 	</button>
-	<h1 class="holder fade-in first">
+	<h1 class="holder fade-in first" [class.is-mobile]="mobileQuery.matches">
 		<p class="subtitle fancy primary-color"><span>The wedding of</span></p>
 	</h1>
-	<h2 class="primary-color fade-in second">Jonathan & Cristina</h2>
+	<h2 class="primary-color fade-in second" [class.is-mobile]="mobileQuery.matches">Jonathan & Cristina</h2>
 	<p class="primary-color fade-in second">11.19.2019</p>
   <button *ngIf="!user" mat-raised-button color="primary" class="fade-in second" (click)="auth.googleLogin()">Register</button>
 </div>

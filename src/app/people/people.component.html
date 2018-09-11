@@ -1,4 +1,4 @@
-<div class="header-container fade-in first">
+<div class="header-container fade-in first" [class.is-mobile]="mobileQuery.matches">
   <img src="assets/images/wedding-ring.svg" class="header-icon">
   <h2 class="primary-color">Guest List</h2>
 </div>
@@ -48,7 +48,7 @@
   <div class="subheader">
     <h3 class="primary-color subheader">The Guests</h3>
   </div>
-  <mat-grid-list cols="5">
+  <mat-grid-list cols="5" [class.is-mobile]="mobileQuery.matches">
     <mat-grid-tile
         *ngFor="let guest of guests"
         [colspan]="guest.cols"
